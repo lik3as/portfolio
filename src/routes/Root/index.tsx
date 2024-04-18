@@ -27,7 +27,7 @@ const Root: FC<Props> = () => {
         <section>
           <p>
             Sou um
-            <span className="clickable">Desenvolvedor Web Fullstack</span>
+            <span className="clickable">Desenvolvedor Fullstack</span>
             que há quase 2 anos trabalha na área com as tecnologias <b className="clickable">Next</b>
             , <b className="clickable">React</b>, <b className="clickable">Node</b>, <b className="clickable">PostgreSQL </b>
             e algumas outras como <TechStack className={ techStack[currentIndex].toLowerCase()}>{techStack[currentIndex]}</TechStack>
