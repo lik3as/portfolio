@@ -46,23 +46,23 @@ export const TechStack = styled.b`
   }
 
   &.docker {
-    color: #0db7ed;
+    color: var(--docker-color);
   }
 
   &.nginx {
-    color: #009900;
+    color: var(--nginx-color);
   }
   
   &.git {
-    color: #f1502f;
+    color: var(--git-color);
   }
   
   &.typescript {
-    color: #007acc;
+    color: var(--ts-color);
   }
 
   &.sequelize {
-    color: #03afef;
+    color: var(--sqlz-color);
   }
 
 `;
