@@ -39,5 +39,5 @@ export const Nav = styled(Navbar)`
 `;
 
 export const Main = styled.main`
-
+  padding: var(--padding-main);
 `;

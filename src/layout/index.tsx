@@ -29,7 +29,7 @@ const Layout: FC = () => {
         </Nav>
       <hr/>
       </Header>
-      <Main className="p-3">
+      <Main>
         <Outlet/>
       </Main>
     </>
