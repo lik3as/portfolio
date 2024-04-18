@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import RobotoBold from "../assets/fonts/roboto/Roboto-Bold.ttf"
 import Roboto from "../assets/fonts/roboto/Roboto-Regular.ttf"
-import { HEADER_HEIGHT } from "../constants";
+import { DOCKER_COLOR, GIT_COLOR, HEADER_HEIGHT, NGINX_COLOR, PADDING_MAIN, SQLZ_COLOR, TS_COLOR } from "../constants";
 
 export default createGlobalStyle`
   @font-face {
@@ -24,8 +24,15 @@ export default createGlobalStyle`
 
   :root {
     --header-height: ${HEADER_HEIGHT}px;
-  }
- 
+    --padding-main: ${PADDING_MAIN}px;
+
+    --docker-color: ${DOCKER_COLOR};
+    --nginx-color: ${NGINX_COLOR};
+    --git-color: ${GIT_COLOR};
+    --ts-color: ${TS_COLOR};
+    --sqlz-color: ${SQLZ_COLOR};
+  } 
+
   @media screen and (width <= 768px) {
     html {
       font-size: .75rem;
