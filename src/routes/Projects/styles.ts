@@ -17,6 +17,34 @@ export default styled.div`
     margin-top: 70px;
     font-family: "Roboto Bold";
   }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes slideLeft {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+  
+  & .card {
+    transition: translate .3s ease;
+  }
+
+  & .card.init {
+    animation: fadeIn .3s;
+  }
+  
+  & .card.slide {
+    animation: slideLeft .3s;
+  }
+  
 `;
 
 export const ImgCtn = styled.div<{$width: string, $height?: string}>`
@@ -24,7 +52,7 @@ export const ImgCtn = styled.div<{$width: string, $height?: string}>`
   height: ${props => props.$height ?? "auto"};
 
   & > img {
-    object-fit: "fill";
+    object-fit: fill;
   }
 `;
 
