@@ -35,6 +35,7 @@ export default styled.div`
   
   & .card {
     transition: translate .3s ease;
+    margin-left: calc(48px + 32px);
   }
 
   & .card.init {
@@ -71,6 +72,7 @@ export const List = styled.ul<{$stackType: "front" | "back"}>`
   display: flex;
   flex-direction: row;
   justiy-content: space-between;
+  padding: 0;
   
 `;
 
@@ -83,6 +85,10 @@ export const TechItem = styled.li<{$color: string}>`
 
   & {
     margin-right: 1rem;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
   }
 
 `;
