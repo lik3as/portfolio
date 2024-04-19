@@ -63,7 +63,7 @@ const Projects: FC<Props> = () => {
           </Card.Header>
           <Card.Body className="p-0">
             <ImgCtn $width="500px" $height="254px">
-              <img src={projects[curProjectIndex].img} alt="insert image here" width="100%"/>
+              <img src={projects[curProjectIndex].img} alt="insert image here" width="100%" height="100%"/>
             </ImgCtn>
           </Card.Body>
         </Card>
