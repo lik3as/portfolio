@@ -46,16 +46,16 @@ const projects: Project[] =  [
 
 const Projects: FC<Props> = () => {
   const [curProjectIndex, setCurProjectIndex] = useState(0);
-  const [cardStatus, setCardStatus] = useState("init");
+  const [projectStatus, setProjectStatus] = useState("init");
 
   const nextProject = () => {
-    setCardStatus("slide");
+    setProjectStatus("slide");
 
     setTimeout(() => {
       const willIndexOverflow = curProjectIndex == projects.length - 1 ;
       setCurProjectIndex((willIndexOverflow ? 0 : curProjectIndex + 1));
 
-      setCardStatus("init");
+      setProjectStatus("init");
     }, 300);
   }
   
@@ -63,7 +63,7 @@ const Projects: FC<Props> = () => {
   return (
     <StyledProjects>
       <div className="d-flex flex-row align-items-center justify-content-center proj-head">
-        <Card className={`ms-5 ${cardStatus}`}>
+        <Card className={`ms-5 ${projectStatus}`}>
           <Card.Header className="text-center">
             {projects[curProjectIndex].name}
           </Card.Header>
