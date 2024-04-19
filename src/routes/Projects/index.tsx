@@ -21,11 +21,11 @@ const projects: Project[] =  [
   img: ncaMain,
   stack: {
     front: [
-      {Icon: SiNextdotjs, color: "black"}, {Icon: SiReact, color: REACT_COLOR},
-      {Icon: SiTypescript, color: TS_COLOR}, {Icon: SiStyledcomponents, color: SC_COLOR}, 
+      {Icon: SiNextdotjs, color: "black", title: "Next.js"}, {Icon: SiReact, color: REACT_COLOR, title: "React"},
+      {Icon: SiTypescript, color: TS_COLOR, title: "Typescript"}, {Icon: SiStyledcomponents, color: SC_COLOR, title: "Styled-Components"}, 
     ],
     back: [
-      {Icon: SiPostgresql, color: PSQL_COLOR}, {Icon: SiSequelize, color: SQLZ_COLOR},
+      {Icon: SiPostgresql, color: PSQL_COLOR, title: "PostgreSQL"}, {Icon: SiSequelize, color: SQLZ_COLOR, title: "Sequelize ORM"},
     ]
   }}, {
     name: "IDFace",
@@ -34,11 +34,11 @@ const projects: Project[] =  [
     img: idfaceMain,
     stack: {
       front: [
-        {Icon: SiReact, color: REACT_COLOR}, {Icon: SiTypescript, color: TS_COLOR},
-        {Icon: SiStyledcomponents, color: SC_COLOR}
+        {Icon: SiReact, color: REACT_COLOR, title: "React"}, {Icon: SiTypescript, color: TS_COLOR, title: "Typescript"},
+        {Icon: SiStyledcomponents, color: SC_COLOR, title: "Styled-Components"}
       ],
       back: [
-        {Icon: SiNginx, color: NGINX_COLOR}, {Icon: SiDocker, color: DOCKER_COLOR}
+        {Icon: SiNginx, color: NGINX_COLOR, title: "NGINX"}, {Icon: SiDocker, color: DOCKER_COLOR, title: "Docker"}
       ]
     }
   }
@@ -79,14 +79,14 @@ const Projects: FC<Props> = () => {
       <List $stackType="front">
         {projects[curProjectIndex].stack.front.map((tech, i) => (
           <TechItem $color={tech.color} key={i}>
-            <tech.Icon size="3rem"/>
+            <tech.Icon size="3rem" title={tech.title}/>
           </TechItem>
         ))}
       </List>
       <List $stackType="back">
         {projects[curProjectIndex].stack.back.map((tech, i) => (
           <TechItem $color={tech.color} key={i}>
-            <tech.Icon size="3rem"/>
+            <tech.Icon size="3rem" title={tech.title}/>
           </TechItem>
         ))}
       </List>

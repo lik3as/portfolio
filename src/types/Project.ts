@@ -2,7 +2,8 @@ import { IconType } from "react-icons";
 
 type TechType = {
   Icon: IconType,
-  color: string
+  color: string,
+  title: string
 }
 
 export default interface Project {
