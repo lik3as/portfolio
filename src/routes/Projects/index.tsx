@@ -1,11 +1,11 @@
 import { FC, useState } from "react";
 import { Card } from "react-bootstrap";
 import { FaCircleArrowRight } from "react-icons/fa6";
-import { SiTypescript, SiNextdotjs, SiStyledcomponents, SiReact, SiPostgresql, SiSequelize } from "react-icons/si";
+import { SiTypescript, SiNextdotjs, SiStyledcomponents, SiReact, SiPostgresql, SiSequelize, SiNginx } from "react-icons/si";
 
 import StyledProjects, { ImgCtn, List, TechItem } from "./styles";
 import Project from "../../types/Project";
-import { PSQL_COLOR, REACT_COLOR, SC_COLOR, SQLZ_COLOR, TS_COLOR } from "../../constants";
+import { NGINX_COLOR, PSQL_COLOR, REACT_COLOR, SC_COLOR, SQLZ_COLOR, TS_COLOR } from "../../constants";
 import ncaMain from "../../assets/images/nca-main.webp"
 import idfaceMain from "../../assets/images/idface-main.webp"
 
@@ -37,7 +37,9 @@ const projects: Project[] =  [
         {Icon: SiReact, color: REACT_COLOR}, {Icon: SiTypescript, color: TS_COLOR},
         {Icon: SiStyledcomponents, color: SC_COLOR}
       ],
-      back: []
+      back: [
+        {Icon: SiNginx, color: NGINX_COLOR}
+      ]
     }
   }
 ]
