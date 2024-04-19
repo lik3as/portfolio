@@ -46,8 +46,10 @@ const Projects: FC<Props> = () => {
   const [curProjectIndex, setCurProjectIndex] = useState(0);
 
   const nextProject = () => {
-    if (curProjectIndex == projects.length - 1)
-    return;
+    if (curProjectIndex == projects.length - 1) {
+      setCurProjectIndex(0);
+      return;
+    }
 
     setCurProjectIndex(curProjectIndex + 1);
   }
