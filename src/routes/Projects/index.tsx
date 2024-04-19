@@ -78,14 +78,14 @@ const Projects: FC<Props> = () => {
 
       <List $stackType="front">
         {projects[curProjectIndex].stack.front.map((tech, i) => (
-          <TechItem $color={tech.color} key={i}>
+          <TechItem $color={tech.color} key={i} className={projectStatus}>
             <tech.Icon size="3rem" title={tech.title}/>
           </TechItem>
         ))}
       </List>
       <List $stackType="back">
         {projects[curProjectIndex].stack.back.map((tech, i) => (
-          <TechItem $color={tech.color} key={i}>
+          <TechItem $color={tech.color} key={i} className={projectStatus}>
             <tech.Icon size="3rem" title={tech.title}/>
           </TechItem>
         ))}

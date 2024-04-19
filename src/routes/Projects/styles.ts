@@ -22,6 +22,11 @@ export default styled.div`
     0% { opacity: 0; }
     100% { opacity: 1; }
   }
+
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
   
   @keyframes slideLeft {
     from {
@@ -89,6 +94,14 @@ export const TechItem = styled.li<{$color: string}>`
 
   &:last-of-type {
     margin-right: 0;
+  }
+
+  &.init{
+    animation: fadeIn .3s;
+  }
+
+  &.slide{
+    animation: fadeOut .3s;
   }
 
 `;
