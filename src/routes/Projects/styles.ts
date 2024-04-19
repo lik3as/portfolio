@@ -24,7 +24,7 @@ export const ImgCtn = styled.div<{$width: string, $height?: string}>`
   height: ${props => props.$height ?? "auto"};
 
   & > img {
-    
+    object-fit: "fill";
   }
 `;
 
