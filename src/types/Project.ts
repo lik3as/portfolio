@@ -1,6 +1,6 @@
 import { IconType } from "react-icons";
 
-type TechType = {
+type Tech = {
   Icon: IconType,
   color: string,
   title: string
@@ -12,7 +12,7 @@ export default interface Project {
   img: string,
   repo: string,
   stack: {
-    front: TechType[],
-    back: TechType[]
+    front: Tech[],
+    back: Tech[]
   }
 }
