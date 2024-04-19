@@ -4,15 +4,17 @@ import { FaCircleArrowRight } from "react-icons/fa6";
 import { SiTypescript, SiNextdotjs, SiStyledcomponents, SiReact, SiPostgresql, SiSequelize } from "react-icons/si";
 
 import StyledProjects, { ImgCtn, List, TechItem } from "./styles";
-import ncaMain from "../../assets/images/nca-main.webp"
 import Project from "../../types/Project";
 import { PSQL_COLOR, REACT_COLOR, SC_COLOR, SQLZ_COLOR, TS_COLOR } from "../../constants";
+import ncaMain from "../../assets/images/nca-main.webp"
+import idfaceMain from "../../assets/images/idface-main.webp"
 
 interface Props {
 
 }
 
-const projects: Project[] =  [{
+const projects: Project[] =  [
+  {
   name: "NCA Parts",
   desc: "Ecommerce made for NCA Parts",
   repo: "https://github.com/lik3as/ncaparts",
@@ -25,8 +27,20 @@ const projects: Project[] =  [{
     back: [
       {Icon: SiPostgresql, color: PSQL_COLOR}, {Icon: SiSequelize, color: SQLZ_COLOR},
     ]
+  }}, {
+    name: "IDFace",
+    desc: "Authentication Technology",
+    repo: "https://github.com/lik3as/IDFace",
+    img: idfaceMain,
+    stack: {
+      front: [
+        {Icon: SiReact, color: REACT_COLOR}, {Icon: SiTypescript, color: TS_COLOR},
+        {Icon: SiStyledcomponents, color: SC_COLOR}
+      ],
+      back: []
+    }
   }
-}]
+]
 
 const Projects: FC<Props> = () => {
   const [curProjectIndex, setCurProjectIndex] = useState(0);
