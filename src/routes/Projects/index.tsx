@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
 import { Card, Container, Row, Col } from "react-bootstrap";
 import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
+import { MdArrowForwardIos } from "react-icons/md";
 import { SiTypescript, SiNextdotjs, SiStyledcomponents, SiReact, SiPostgresql, SiSequelize, SiNginx, SiDocker, SiJavascript, SiGulp } from "react-icons/si";
 
 import StyledProjects, { ImgCtn, List, TechItem } from "./styles";
@@ -125,6 +126,7 @@ const Projects: FC<Props> = () => {
         ))}
       </List>
 
+      <MdArrowForwardIos className="clickable justify-self-end" transform="rotate(90)" size="2rem"/>
     </StyledProjects>
   )
 }
