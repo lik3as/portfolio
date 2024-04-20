@@ -6,7 +6,7 @@ export default styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+ 
   & .clickable:hover {
     transition: color .3s;
     color: #ff2142;
@@ -37,28 +37,41 @@ export default styled.div`
       opacity: 0;
     }
   }
+
+  @keyframes slideRight {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
   
   & .card {
     transition: translate .3s ease;
-    margin-left: calc(48px + 32px);
   }
 
   & .card.init {
     animation: fadeIn .3s;
   }
   
-  & .card.slide {
+  & .card.slide-left {
     animation: slideLeft .3s;
+  }
+
+  & .card.slide-right {
+    animation: slideRight .3s;
   }
   
 `;
 
 export const ImgCtn = styled.div<{$width: string, $height?: string}>`
-  width: ${props => props.$width};
-  height: ${props => props.$height ?? "auto"};
-
+  max-width: ${props => props.$width};
+  max-height: ${props => props.$height ?? "auto"};
+  
   & > img {
-    object-fit: fill;
+    object-fit: cover;
   }
 `;
 

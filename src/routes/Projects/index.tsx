@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
-import { Card } from "react-bootstrap";
-import { FaCircleArrowRight } from "react-icons/fa6";
+import { Card, Container, Row, Col } from "react-bootstrap";
+import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
 import { SiTypescript, SiNextdotjs, SiStyledcomponents, SiReact, SiPostgresql, SiSequelize, SiNginx, SiDocker, SiJavascript, SiGulp } from "react-icons/si";
 
 import StyledProjects, { ImgCtn, List, TechItem } from "./styles";
@@ -62,13 +62,23 @@ const projects: Project[] =  [
 const Projects: FC<Props> = () => {
   const [curProjectIndex, setCurProjectIndex] = useState(0);
   const [projectStatus, setProjectStatus] = useState("init");
+  const isFinalIndex = curProjectIndex == projects.length - 1;
 
   const nextProject = () => {
-    setProjectStatus("slide");
+    setProjectStatus("slide-left");
 
     setTimeout(() => {
-      const willIndexOverflow = curProjectIndex == projects.length - 1 ;
-      setCurProjectIndex((willIndexOverflow ? 0 : curProjectIndex + 1));
+      setCurProjectIndex(curProjectIndex + 1);
+
+      setProjectStatus("init");
+    }, 300);
+  }
+
+  const prevProject = () => {
+    setProjectStatus("slide-right");
+
+    setTimeout(() => {
+      setCurProjectIndex(curProjectIndex - 1);
 
       setProjectStatus("init");
     }, 300);
@@ -77,19 +87,28 @@ const Projects: FC<Props> = () => {
 
   return (
     <StyledProjects>
-      <div className="d-flex flex-row align-items-center justify-content-center proj-head">
-        <Card className={`ms-5 ${projectStatus}`}>
-          <Card.Header className="text-center">
-            {projects[curProjectIndex].name}
-          </Card.Header>
-          <Card.Body className="p-0">
-            <ImgCtn $width="500px" $height="254px">
-              <img src={projects[curProjectIndex].img} alt={`projeto ${projects[curProjectIndex].name}`} width="100%" height="100%"/>
-            </ImgCtn>
-          </Card.Body>
-        </Card>
-        <FaCircleArrowRight size="2rem" className="ms-5 clickable" onClick={nextProject}/>
-      </div>
+      <Container className="proj-head">
+        <Row>
+          <Col className="d-flex align-items-center justify-content-end">
+            {curProjectIndex ? <FaCircleArrowLeft size="2rem" className="clickable" onClick={prevProject}/> : <></>}
+          </Col>
+          <Col md="8" lg="5">
+            <Card className={`${projectStatus}`}>
+              <Card.Header className="text-center">
+                {projects[curProjectIndex].name}
+              </Card.Header>
+              <Card.Body className="p-0">
+                <ImgCtn $width="100%">
+                  <img src={projects[curProjectIndex].img} alt={`projeto ${projects[curProjectIndex].name}`} width="100%" height="225px"/>
+                </ImgCtn>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col className="d-flex align-items-center justify-content-start">
+            {!isFinalIndex ? <FaCircleArrowRight size="2rem" className="clickable" onClick={nextProject}/> : <></>}
+          </Col>
+        </Row>
+      </Container>
 
       <List $stackType="front">
         {projects[curProjectIndex].stack.front.map((tech, i) => (
