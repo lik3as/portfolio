@@ -1,10 +1,10 @@
 import { FC, useState } from "react";
-import { Card, Container, Row, Col } from "react-bootstrap";
+import { Card, Row, Col } from "react-bootstrap";
 import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
 import { MdArrowForwardIos } from "react-icons/md";
 import { SiTypescript, SiNextdotjs, SiStyledcomponents, SiReact, SiPostgresql, SiSequelize, SiNginx, SiDocker, SiJavascript, SiGulp } from "react-icons/si";
 
-import StyledProjects, { ImgCtn, List, TechItem } from "./styles";
+import StyledProjects, { Grid, ImgCtn, List, TechItem } from "./styles";
 import Project from "../../types/Project";
 import { DOCKER_COLOR, GULP_COLOR, JS_COLOR, NGINX_COLOR, PSQL_COLOR, REACT_COLOR, SC_COLOR, SQLZ_COLOR, TS_COLOR } from "../../constants";
 import ncaMain from "../../assets/images/nca-main.webp"
@@ -88,12 +88,12 @@ const Projects: FC<Props> = () => {
 
   return (
     <StyledProjects>
-      <Container className="proj-head">
+      <Grid>
         <Row>
-          <Col className="d-flex align-items-center justify-content-end">
+          <Col className="d-flex align-items-center justify-content-end first-col">
             {curProjectIndex ? <FaCircleArrowLeft size="2rem" className="clickable" onClick={prevProject}/> : <></>}
           </Col>
-          <Col md="8" lg="5">
+          <Col xs="12" sm="7" md="8" lg="5">
             <Card className={`${projectStatus}`}>
               <Card.Header className="text-center">
                 {projects[curProjectIndex].name}
@@ -105,11 +105,12 @@ const Projects: FC<Props> = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col className="d-flex align-items-center justify-content-start">
-            {!isFinalIndex ? <FaCircleArrowRight size="2rem" className="clickable" onClick={nextProject}/> : <></>}
+          <Col className="d-flex align-items-center last-col">
+            {curProjectIndex ? <FaCircleArrowLeft size="2rem" className="clickable prev-proj" onClick={prevProject}/> : <></>}
+            {!isFinalIndex ? <FaCircleArrowRight size="2rem" className="clickable next-proj" onClick={nextProject}/> : <></>}
           </Col>
         </Row>
-      </Container>
+      </Grid>
 
       <List $stackType="front">
         {projects[curProjectIndex].stack.front.map((tech, i) => (

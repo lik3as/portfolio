@@ -1,4 +1,4 @@
-import { Button as BSButton } from "react-bootstrap";
+import { Button as BSButton, Container } from "react-bootstrap";
 import styled from "styled-components";
 
 export default styled.div`
@@ -11,11 +11,6 @@ export default styled.div`
     transition: color .3s;
     color: #ff2142;
     cursor: pointer;
-  }
-
-  & .proj-head {
-    margin-top: 70px;
-    font-family: "Roboto Bold";
   }
 
   @keyframes fadeIn {
@@ -63,7 +58,42 @@ export default styled.div`
   & .card.slide-right {
     animation: slideRight .3s;
   }
-  
+ 
+`;
+
+export const Grid = styled(Container)`
+  margin-top: 70px;
+  font-family: "Roboto Bold";
+
+  & .last-col {
+    justify-content: start;
+      
+    .prev-proj  {
+      display: none;
+    }
+  }
+
+  @media screen and (width <= 768px) {
+    margin-top: 165px;
+
+    & .first-col * {
+      display: none;
+    }
+
+    & .last-col {
+      margin-top: 1rem;
+      justify-content: space-between;
+
+      .prev-proj {
+        display: inline;
+        margin-start: auto;
+      }
+      .next-proj {
+        margin-left: auto;
+      }
+    } 
+  }
+
 `;
 
 export const ImgCtn = styled.div<{$width: string, $height?: string}>`
@@ -72,6 +102,10 @@ export const ImgCtn = styled.div<{$width: string, $height?: string}>`
   
   & > img {
     object-fit: cover;
+    
+    @media screen and (width <= 768px) {
+      height: 160px;
+    }
   }
 `;
 
