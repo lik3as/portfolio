@@ -10,6 +10,7 @@ import { DOCKER_COLOR, GULP_COLOR, JS_COLOR, NGINX_COLOR, PSQL_COLOR, REACT_COLO
 import ncaMain from "../../assets/images/nca-main.webp"
 import idfaceMain from "../../assets/images/idface-main.webp"
 import abcbWeb from "../../assets/images/abcb.webp"
+import ProjectSection from "../../components/ProjectSection";
 
 interface Props {
 
@@ -126,7 +127,11 @@ const Projects: FC<Props> = () => {
         ))}
       </List>
 
-      <MdArrowForwardIos className="clickable justify-self-end" transform="rotate(90)" size="2rem"/>
+      <MdArrowForwardIos className="clickable justify-self-end mb-5" transform="rotate(90)" size="2rem"/>
+
+      <ProjectSection title="Banco de dados" href="about_database">
+        Insert datbase desc here
+      </ProjectSection>
     </StyledProjects>
   )
 }
