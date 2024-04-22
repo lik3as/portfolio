@@ -36,6 +36,7 @@ export const Nav = styled(Navbar)`
     cursor: pointer;
     color: #ff2142;
   }
+
 `;
 
 export const Main = styled.main`
