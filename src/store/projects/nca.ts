@@ -1,6 +1,6 @@
-import { SiNextdotjs, SiPostgresql, SiReact, SiSequelize, SiStyledcomponents, SiTypescript, SiExpress } from "react-icons/si";
+import { SiNextdotjs, SiPostgresql, SiReact, SiSequelize, SiStyledcomponents, SiTypescript, SiExpress, SiBootstrap } from "react-icons/si";
 import ncaMain from "../../assets/images/nca-main.webp";
-import { PSQL_COLOR, REACT_COLOR, SC_COLOR, SQLZ_COLOR, TS_COLOR } from "../../constants";
+import { PSQL_COLOR, REACT_COLOR, SC_COLOR, SQLZ_COLOR, TS_COLOR, BS_COLOR } from "../../constants";
 import Project from "../../types/Project";
 
 export default  {
@@ -11,7 +11,8 @@ export default  {
   stack: {
     front: [
       {Icon: SiNextdotjs, color: "black", title: "Next.js"}, {Icon: SiReact, color: REACT_COLOR, title: "React"},
-      {Icon: SiTypescript, color: TS_COLOR, title: "Typescript"}, {Icon: SiStyledcomponents, color: SC_COLOR, title: "Styled-Components"}, 
+      {Icon: SiTypescript, color: TS_COLOR, title: "Typescript"}, {Icon: SiStyledcomponents, color: SC_COLOR, title: "Styled-Components"},
+      {Icon: SiBootstrap, color: BS_COLOR, title: "Bootstrap"}
     ],
     back: [
       {Icon: SiPostgresql, color: PSQL_COLOR, title: "PostgreSQL"}, {Icon: SiSequelize, color: SQLZ_COLOR, title: "Sequelize ORM"},

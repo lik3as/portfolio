@@ -1,6 +1,6 @@
-import { SiDocker, SiGulp, SiJavascript } from "react-icons/si"
+import { SiBootstrap, SiDocker, SiGulp, SiJavascript } from "react-icons/si"
 import abcbWeb from "../../assets/images/abcb.webp"
-import { DOCKER_COLOR, GULP_COLOR, JS_COLOR } from "../../constants"
+import { DOCKER_COLOR, GULP_COLOR, JS_COLOR, BS_COLOR } from "../../constants"
 import Project from "../../types/Project";
 
 export default {
@@ -11,6 +11,7 @@ export default {
   stack: {
     front: [
       {Icon: SiJavascript, color: JS_COLOR, title: "Javascript"}, {Icon: SiGulp, color: GULP_COLOR, title: "Gulp.js"},
+      {Icon: SiBootstrap, color: BS_COLOR, title: "Bootstrap"}
     ],
     back: [
       {Icon: SiDocker, color: DOCKER_COLOR, title: "Docker"}

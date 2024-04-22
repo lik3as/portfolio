@@ -12,6 +12,7 @@ export const REACT_COLOR  = "#0A6ED1";
 export const PSQL_COLOR  = "#0064A5";
 export const JS_COLOR = "#F0DB4F";
 export const GULP_COLOR = "#DB4446";
+export const BS_COLOR = "#563D7C";
 
 export const HEADER_HEIGHT = 62;
 export const PADDING_MAIN = 16;

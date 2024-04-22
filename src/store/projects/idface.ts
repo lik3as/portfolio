@@ -1,6 +1,6 @@
-import { SiDocker, SiNginx, SiReact, SiStyledcomponents, SiTypescript } from "react-icons/si"
+import { SiBootstrap, SiDocker, SiNginx, SiReact, SiStyledcomponents, SiTypescript } from "react-icons/si"
 import idfaceMain from "../../assets/images/idface-main.webp"
-import { DOCKER_COLOR, NGINX_COLOR, REACT_COLOR, SC_COLOR, TS_COLOR } from "../../constants"
+import { DOCKER_COLOR, NGINX_COLOR, REACT_COLOR, SC_COLOR, TS_COLOR, BS_COLOR } from "../../constants"
 import Project from "../../types/Project"
 
 export default {
@@ -11,7 +11,7 @@ export default {
   stack: {
     front: [
       {Icon: SiReact, color: REACT_COLOR, title: "React"}, {Icon: SiTypescript, color: TS_COLOR, title: "Typescript"},
-      {Icon: SiStyledcomponents, color: SC_COLOR, title: "Styled-Components"}
+      {Icon: SiStyledcomponents, color: SC_COLOR, title: "Styled-Components"}, {Icon: SiBootstrap, color: BS_COLOR, title: "Bootstrap"}
     ],
     back: [
       {Icon: SiNginx, color: NGINX_COLOR, title: "NGINX"}, {Icon: SiDocker, color: DOCKER_COLOR, title: "Docker"}
