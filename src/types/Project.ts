@@ -6,6 +6,12 @@ type Tech = {
   title: string
 }
 
+type Section = {
+  id: string, 
+  title: string,
+  content: string,
+ 
+}
 export default interface Project {
   name: string,
   desc: string,
@@ -14,5 +20,6 @@ export default interface Project {
   stack: {
     front: Tech[],
     back: Tech[]
-  }
+  },
+  sections: Section[]
 }
