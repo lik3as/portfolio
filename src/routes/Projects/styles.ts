@@ -6,6 +6,11 @@ export default styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  & a {
+    text-decoration: inherit;
+    color: inherit;
+  }
  
   & .clickable:hover {
     transition: color .3s;
