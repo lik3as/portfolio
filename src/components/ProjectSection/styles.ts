@@ -22,7 +22,7 @@ export default styled.section`
     display: inline-block;
     box-sizing: border-box;
     visibility: hidden;
-    margin-left: -.65em;
+    margin-left: -.6em;
   }
 
   & a:hover {
