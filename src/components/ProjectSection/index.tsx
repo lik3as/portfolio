@@ -5,13 +5,13 @@ interface Props {
   className?: string;
   title: string;
   children?: React.ReactNode;
-  href: string;
+  id: string;
 }
 
-const ProjectSection: FC<Props> = ({className, title, children, href}) => { 
+const ProjectSection: FC<Props> = ({className, title, children, id}) => { 
   return (
     <Section className={className}>
-      <h3 id={href}><a href={`#${href}`}>{title}</a></h3>
+      <h3 id={id}><a href={`#${id}`}>{title}</a></h3>
       <p>{children}</p>
     </Section>
   )
