@@ -35,7 +35,7 @@ const Layout: FC = () => {
               <IoIosBook size="1.5em"/>
             </Link>
           </nav>
-          <div className="d-flex align-items-center ms-auto">
+          <div className="d-flex align-items-center ms-auto external-media">
             <a className="me-1" href={GITHUB_URL} target="_blank">
               <FaGithub size="1.5em"/>
             </a>

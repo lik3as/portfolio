@@ -37,6 +37,19 @@ export const Nav = styled(Navbar)`
     color: #ff2142;
   }
 
+  @media screen and (width <= 768px) {
+    & .external-media svg {
+      width: 2em;
+      height: 2em;
+    }
+
+    & nav svg {
+      width: 2em;
+      height: 2em;
+    }
+
+  }
+
 `;
 
 export const Main = styled.main`
