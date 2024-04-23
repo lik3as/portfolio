@@ -106,10 +106,10 @@ export const ImgCtn = styled.div<{$width: string, $height?: string}>`
   max-height: ${props => props.$height ?? "auto"};
   
   & > img {
-    object-fit: cover;
+    object-fit: fill;
     
-    @media screen and (width <= 768px) {
-      height: 160px;
+    @media screen and (width <= 468px) {
+      height: 230px;
     }
   }
 `;

@@ -42,14 +42,14 @@ const Projects: FC = () => {
           <Col className="d-flex align-items-center justify-content-end first-col">
             {curProjectIndex ? <FaCircleArrowLeft size="2rem" className="clickable" onClick={prevProject}/> : <></>}
           </Col>
-          <Col xs="12" sm="7" md="8" lg="5">
+          <Col xs="12" lg="5">
             <Card className={`${projectStatus}`}>
               <Card.Header className="text-center">
                 {project.name}
               </Card.Header>
               <Card.Body className="p-0">
                 <ImgCtn $width="100%">
-                  <img src={project.img} alt={`projeto ${project.name}`} width="100%" height="225px"/>
+                  <img src={project.img} alt={`projeto ${project.name}`} width="100%" height="260px"/>
                 </ImgCtn>
               </Card.Body>
             </Card>
