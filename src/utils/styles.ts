@@ -35,7 +35,7 @@ export default createGlobalStyle`
 
   @media screen and (width <= 768px) {
     html {
-      font-size: .9rem;
+      font-size: .8rem;
     }
   }
 `;
