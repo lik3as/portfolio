@@ -37,24 +37,24 @@ const Projects: FC = () => {
 
   return (
     <StyledProjects>
-      <Grid>
+      <Grid fluid="sm">
         <Row>
-          <Col className="d-flex align-items-center justify-content-end first-col">
+          <Col className="d-flex align-items-center justify-content-end first-col" lg="3">
             {curProjectIndex ? <FaCircleArrowLeft size="2rem" className="clickable" onClick={prevProject}/> : <></>}
           </Col>
-          <Col xs="12" lg="5">
+          <Col lg="6">
             <Card className={`${projectStatus}`}>
               <Card.Header className="text-center">
                 {project.name}
               </Card.Header>
               <Card.Body className="p-0">
                 <ImgCtn $width="100%">
-                  <img src={project.img} alt={`projeto ${project.name}`} width="100%" height="260px"/>
+                  <img src={project.img} alt={`projeto ${project.name}`} width="100%" height="300px"/>
                 </ImgCtn>
               </Card.Body>
             </Card>
           </Col>
-          <Col className="d-flex align-items-center last-col">
+          <Col className="d-flex align-items-center last-col" lg="3">
             {curProjectIndex ? <FaCircleArrowLeft size="2rem" className="clickable prev-proj" onClick={prevProject}/> : <></>}
             {!isFinalIndex ? <FaCircleArrowRight size="2rem" className="clickable next-proj" onClick={nextProject}/> : <></>}
           </Col>
@@ -76,7 +76,7 @@ const Projects: FC = () => {
         ))}
       </List>
 
-      <a href={`#${project.sections ? project.sections[0].id : ""}`}>
+      <a href={`#${project.sections ? project.sections[0].id : ""}`} className="arrow-down">
         <MdArrowForwardIos className="clickable justify-self-end mb-5" transform="rotate(90)" size="1.6rem"/>
       </a>
 

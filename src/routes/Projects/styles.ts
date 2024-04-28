@@ -63,11 +63,17 @@ export default styled.div`
   & .card.slide-right {
     animation: slideRight .3s;
   }
+
+  @media screen and (width <= 768px) {
+    .arrow-down {
+      margin-bottom: 150px;
+    }
+  }
  
 `;
 
 export const Grid = styled(Container)`
-  margin-top: 70px;
+  margin-top: 25px;
   font-family: "Roboto Bold";
 
   & .last-col {
@@ -79,7 +85,11 @@ export const Grid = styled(Container)`
   }
 
   @media screen and (width <= 768px) {
-    margin-top: 165px;
+    margin-top: 200px;
+
+    @media screen and (height <= 768px) {
+      margin-top: 80px;
+    }
 
     & .first-col * {
       display: none;
@@ -109,7 +119,7 @@ export const ImgCtn = styled.div<{$width: string, $height?: string}>`
     object-fit: fill;
     
     @media screen and (width <= 468px) {
-      height: 230px;
+      height: 200px;
     }
   }
 `;
