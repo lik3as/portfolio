@@ -101,8 +101,8 @@ const Canvas = () => {
             shadowOpacity={0.6}
             shadowOffsetX={tech.isDragging ? 10 : 5}
             shadowOffsetY={tech.isDragging ? 10 : 5}
-            scaleX={selectScale(tech.name) * (window.innerWidth <= 768 ? .5 : 1)}
-            scaleY={selectScale(tech.name) * (window.innerWidth <= 768 ? .5 : 1)}
+            scaleX={selectScale(tech.name) * (window.innerWidth <= 768 ? .5 : .8)}
+            scaleY={selectScale(tech.name) * (window.innerWidth <= 768 ? .5 : .8)}
             onDragtecht={handleDragtecht}
             onDragEnd={handleDragEnd}
             data={tech.path}

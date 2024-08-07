@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export default styled.div`
-  margin-top: 120px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,8 +25,15 @@ export default styled.div`
   & section {
     width: 45%;
   }
+
+  @media screen and (width <= 765px) {
+    & section {
+      width: 65%;
+    }
+
+  }
   
-  & .works {
+  & .topic {
     margin-top: 14%;
     text-decoration: none;
     color: black;
@@ -37,6 +44,17 @@ export default styled.div`
     transition: color .3s;
     color: #ff2142;
     cursor: pointer;
+  }
+
+  & .no-style {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+  }
+
+  & .topics {
+    max-height: 70vh;
+    overflow-y: scroll;
   }
 `;
 
