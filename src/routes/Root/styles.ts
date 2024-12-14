@@ -1,61 +1,97 @@
 import styled from "styled-components";
+import { Row } from "react-bootstrap"
 
-export default styled.div`
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-
-  & section {
-    z-index: 2;
-    font: 1rem "Roboto";
-  }
-  
-  & p {
-    font-size: 1.25rem;
+export default styled(Row)`
+  & .photo-container {
+    max-width: 80%;
   }
 
-  & span,h3 {
-    display: block;
-    font: 1.8rem "Roboto Bold";
-  }
-  
-  & section {
-    width: 45%;
+  & .photo-container img {
+    max-width: 100%;
+    object-fit: contain;
   }
 
-  @media screen and (width <= 765px) {
-    & section {
-      width: 65%;
-    }
-
-  }
-  
-  & .topic {
-    margin-top: 14%;
-    text-decoration: none;
-    color: black;
-    z-index: 2;
+  & .star-container {
+    max-width: 30%;
   }
 
-  & .clickable:hover {
-    transition: color .3s;
-    color: #ff2142;
-    cursor: pointer;
-  }
-
-  & .no-style {
-    text-decoration: inherit;
-    color: inherit;
-    cursor: auto;
+  & .star-container img {
+    max-width: 100%;
+    object-fit: contain;
   }
 
   & .topics {
-    max-height: 70vh;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
     overflow-y: scroll;
+    max-height: 70vh;
+
+    & section {
+      z-index: 2;
+      font: 1rem "Roboto";
+    }
+
+    & section p {
+      margin: 0 auto;
+    }
+
+    & section:nth-of-type(1) {
+      margin-bottom: 40%;
+    }
+    
+    & p {
+      font-size: 1.25rem;
+    }
+
+    & span,h3 {
+      display: block;
+      font: 1.8rem "Roboto Bold";
+    }
+
+    & .topic {
+      margin-top: 14%;
+      text-decoration: none;
+      color: black;
+      z-index: 2;
+    }
+
+    & .clickable:hover {
+      transition: color .3s;
+      color: #ff2142;
+      cursor: pointer;
+    }
+
+    & .no-style {
+      text-decoration: inherit;
+      color: inherit;
+      cursor: auto;
+    }
+
   }
+
+  @media screen and (width <= 765px) {
+
+    & .topics {
+      max-height: 100vh;
+      overflow: hidden;
+    }
+
+    & .star-container {
+      display: none;
+    }
+  }
+
+  @media screen and (height <= 632px and width >= 768px) {
+    & .topics section:last-of-type {
+      margin-top: 20%;
+    }
+  }
+}
+
 `;
 
 export const TechStack = styled.b`

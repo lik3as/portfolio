@@ -3,6 +3,10 @@ import { FaStar } from "react-icons/fa"
 import StyledRoot, { TechStack } from "./styles";
 import { Link } from "react-router-dom";
 import Canvas from "../../components/Canvas";
+import { Col } from "react-bootstrap";
+import photo from "../../assets/images/selfie.jpeg"
+import star from "../../assets/images/star.gif"
+import redStar from "../../assets/images/red-star.gif"
 
 interface Props {
 
@@ -25,7 +29,38 @@ const Root: FC<Props> = () => {
     <>
       <Canvas />
       <StyledRoot>
-        <div className="align-items-center d-flex flex-column topics">
+        <Col md={3}>
+          <div className="ms-auto me-auto mb-5 photo-container">
+            <img src={photo}/>
+          </div>
+          <div className="ms-auto me-auto mt-2 star-container">
+            <img src={redStar}/>
+            <img src={star} style={{marginTop: "-40px", rotate: "40deg", marginLeft: "-30px"}}/>
+          </div>
+        </Col>
+        <Col md={6} className="topics">
+          <section className="mt-4">
+            <p>
+              <Link to="/#" className="clickable topic">
+                <span>Soft Skills <FaStar className="mb-2" /></span>
+              </Link>
+              são coisas que aprimorei bastante durante minha jornada na área, principalmente a <b>honestinade</b> com outras
+              pessoas e comigo mesmo. <br />
+              Durante esse tempo, aprendi a <b>trabalhar em equipe</b> e como lidar com <b>prazos</b> e <b>adversidades</b>, sempre
+              tentando manter controle sobre a situação e <b>reduzir o estresse</b>.
+            </p>
+          </section>
+
+          <section className="mt-4">
+            <p>
+              <Link to="/projects" className="clickable topic">
+                <span>Meus Trabalhos <FaStar className="mb-2" /></span>
+              </Link>
+              podem ser realizados tanto de uma maneira mais <b>tradicional</b>, utilizando o máximo das linguagens de programação e suas ferramentas,
+              como turbinado com as tecnologias <b>atuais</b>.
+            </p>
+          </section>
+
           <section>
             <p>
               <Link to="/#" className="clickable topic">
@@ -40,29 +75,12 @@ const Root: FC<Props> = () => {
               .
             </p>
           </section>
-
-          <section className="mt-3">
-            <p>
-              <Link to="/projects" className="clickable topic">
-                <span>Meus Trabalhos <FaStar className="mb-2" /></span>
-              </Link>
-              podem ser realizados tanto de uma maneira mais <b>tradicional</b>, utilizando o máximo das linguagens de programação e suas ferramentas,
-              como turbinado com as tecnologias <b>atuais</b>.
-            </p>
-          </section>
-
-          <section className="mt-3">
-            <p>
-              <Link to="/#" className="clickable topic">
-                <span>Soft Skills <FaStar className="mb-2" /></span>
-              </Link>
-              são coisas que aprimorei bastante durante minha jornada na área, principalmente a <b>honestinade</b> com outras
-              pessoas e comigo mesmo. <br/>
-              Durante esse tempo, aprendi a <b>trabalhar em equipe</b> e como lidar com <b>prazos</b> e <b>adversidades</b>, sempre
-              tentando manter controle sobre a situação e <b>reduzir o estresse</b>.
-            </p>
-          </section>
-        </div>
+        </Col>
+        <Col md={3}>
+          <div className="ms-auto me-5 mt-4 star-container">
+            <img src={star}/>
+          </div>
+        </Col>
       </StyledRoot>
     </>
   )
