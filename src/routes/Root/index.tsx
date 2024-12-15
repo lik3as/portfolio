@@ -41,7 +41,7 @@ const Root: FC<Props> = () => {
         <Col md={6} className="topics">
           <section className="mt-4">
             <p>
-              <Link to="/#" className="clickable topic">
+              <Link to="#" className="clickable topic">
                 <span>Soft Skills <FaStar className="mb-2" /></span>
               </Link>
               são coisas que aprimorei bastante durante minha jornada na área, principalmente a <b>honestinade</b> com outras
@@ -53,7 +53,7 @@ const Root: FC<Props> = () => {
 
           <section className="mt-4">
             <p>
-              <Link to="/projects" className="clickable topic">
+              <Link to="projects" className="clickable topic">
                 <span>Meus Trabalhos <FaStar className="mb-2" /></span>
               </Link>
               podem ser realizados tanto de uma maneira mais <b>tradicional</b>, utilizando o máximo das linguagens de programação e suas ferramentas,
