@@ -9,6 +9,10 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "engines": {
+    "node": ">= 20.0.0",
+    "npm": ">= 10.8.0"
+  },
   "dependencies": {
     "bootstrap": "^5.3.3",
     "konva": "^9.3.6",
