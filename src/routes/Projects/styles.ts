@@ -66,7 +66,7 @@ export default styled.div`
 
   @media screen and (width <= 768px) {
     .arrow-down {
-      margin-bottom: 150px;
+      margin-bottom: 2rem;
     }
   }
  
@@ -85,11 +85,6 @@ export const Grid = styled(Container)`
   }
 
   @media screen and (width <= 768px) {
-    margin-top: 200px;
-
-    @media screen and (height <= 768px) {
-      margin-top: 80px;
-    }
 
     & .first-col * {
       display: none;
