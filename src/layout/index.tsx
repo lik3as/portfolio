@@ -28,10 +28,10 @@ const Layout: FC = () => {
             </span>
           </a>
           <nav className="ms-3 d-flex align-items-center">
-            <Link to="/" className="me-1">
+            <Link to="#" className="me-1">
               <FaHome size="1.5em"/>
             </Link>
-            <Link to="/projects" className="">
+            <Link to="/portfolio/projects" className="">
               <IoIosBook size="1.5em"/>
             </Link>
           </nav>
