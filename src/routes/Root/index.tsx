@@ -41,7 +41,7 @@ const Root: FC<Props> = () => {
         <Col md={6} className="topics">
           <section className="mt-4">
             <p>
-              <Link to="#" className="clickable topic">
+              <Link to="." className="clickable topic">
                 <span>Soft Skills <FaStar className="mb-2" /></span>
               </Link>
               são coisas que aprimorei bastante durante minha jornada na área, principalmente a <b>honestinade</b> com outras
