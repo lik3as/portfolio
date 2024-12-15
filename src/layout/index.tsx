@@ -28,7 +28,7 @@ const Layout: FC = () => {
             </span>
           </a>
           <nav className="ms-3 d-flex align-items-center">
-            <Link to="#" className="me-1">
+            <Link to="/portfolio" className="me-1">
               <FaHome size="1.5em"/>
             </Link>
             <Link to="/portfolio/projects" className="">
