@@ -4,6 +4,7 @@ export default styled.section`
   width: 100%;
   padding: 15px 30px;
   font-family: "Roboto";
+  font-size: 1.1rem;
   
   & h1,h2,h3,h4,h5 {
     font-family: "Roboto Bold";
