@@ -1,0 +1,5 @@
+export enum HEADER_HEIGHTS { 
+	BIG=80,
+	MEDIUM=65,
+	SMALL=53
+};

@@ -1,7 +1,12 @@
+import { ScrollingLayout } from "@/layouts/scrolling";
+import { Header } from "@/components/header";
+
 export function HomePage () {
 	return (
-		<h1>
-		hello
-		</h1>
+		<ScrollingLayout header={<Header/>}>
+			<h1>
+				sss
+			</h1>
+		</ScrollingLayout>
 	)
 }

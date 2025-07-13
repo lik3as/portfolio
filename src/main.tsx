@@ -1,13 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
-import { Route, Routes } from 'react-router'
+import { Route, Routes, BrowserRouter } from 'react-router'
+
+import { HomePage } from "@/pages/home";
+import GlobalStyle from "@/styles/global_style";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
-		<Routes>
-			<Route>
-			</Route>
-		</Routes>
+		<GlobalStyle/>
+		<BrowserRouter>
+				<Routes>
+					<Route index element={<HomePage/>}/>
+				</Routes>
+		</BrowserRouter>
 	</React.StrictMode>,
 )
