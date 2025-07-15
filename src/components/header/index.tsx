@@ -1,10 +1,15 @@
 import { StyledHeader } from "./styles"
-import { HEADER_HEIGHTS } from "@/constants/sizing"
+import { HEADER_HEIGHTS, HEADER_PADDINGS } from "@/constants/sizing_vars"
+import { Nav } from "@/components/nav";
 
 export function Header () {
 	return (
-		<StyledHeader $height={HEADER_HEIGHTS.BIG}>
-			misery
+		<StyledHeader 
+		$outlined
+		$padding={HEADER_PADDINGS.BIGGEST}
+		$height={HEADER_HEIGHTS.BIG}
+		>
+			<Nav/>
 		</StyledHeader>
 	);
 }
