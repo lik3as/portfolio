@@ -1,4 +1,4 @@
-import { StyledNav, NavLinks } from "./styles";
+import { StyledNav, NavLinks, Link } from "./styles";
 
 interface Props {
 	socials?: boolean;
@@ -10,11 +10,14 @@ export function Nav (_props: Props) {
 		<StyledNav
 			$spacing={"space-between"}
 		>
+			<Link className="name">
+				DAVI ALMEIDA
+			</Link>
 			<NavLinks>
-				<li>ola</li>
-				<li>ola</li>
-				<li>ola</li>
-				<li>ola</li>
+				<Link href="#about">SOBRE</Link>
+				<Link>PROJETOS</Link>
+				<Link>EXPERIÊNCIA</Link>
+				<Link>CONTATO</Link>
 			</NavLinks>
 		</StyledNav>
 	);

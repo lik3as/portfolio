@@ -6,7 +6,7 @@ export function Header () {
 	return (
 		<StyledHeader 
 		$outlined
-		$padding={HEADER_PADDINGS.BIGGEST}
+		$padding={HEADER_PADDINGS.SMALL}
 		$height={HEADER_HEIGHTS.BIG}
 		>
 			<Nav/>
