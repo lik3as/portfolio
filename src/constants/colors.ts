@@ -1,3 +1,12 @@
+/*
+ *	 I think there is no problem setting the colors in
+ *	 a typescript file because I'll not modify them 
+ *	 based on a style state (currently)
+ *
+ *	 But mayber i'll change my mind if I add more themes
+ *
+ */
+
 export enum TECH_COLORS {
 	DOCKER="#0db7ed",
 	TS="#007acc",
