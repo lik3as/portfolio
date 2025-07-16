@@ -3,9 +3,6 @@ import { DARK_THEME_COLORS } from "@/constants/colors";
 
 export default createGlobalStyle`
 	@media screen and (width <= 768px) {
-		html {
-			font-size: 14px;
-		}
 	}
 
 	body {

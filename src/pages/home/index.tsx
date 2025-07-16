@@ -4,9 +4,7 @@ import { Header } from "@/components/header";
 export function HomePage () {
 	return (
 		<ScrollingLayout header={<Header/>}>
-			<h1>
-				sss
-			</h1>
+			<h1></h1>
 		</ScrollingLayout>
 	)
 }

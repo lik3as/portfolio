@@ -8,10 +8,20 @@ export const StyledHeader = styled.header<{
 	$height: HEADER_HEIGHTS,
 }>`
 	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+	width: 100%;
+
 	align-content: center;
 
 	height: var(${props => props.$height});
 	background-color: ${DARK_THEME_COLORS.DARK_RED};
 	box-shadow: 0px 1px 28px black;
 	padding: 0 var(${props => props.$padding});
+
+	@media screen and (width <= 768px) {
+		font-size: 1.2rem;
+	}
 `;
