@@ -13,6 +13,7 @@ export const StyledHeader = styled.header<{
 	left: 0;
 	box-sizing: border-box;
 	width: 100%;
+	z-index: 1;
 
 	align-content: center;
 

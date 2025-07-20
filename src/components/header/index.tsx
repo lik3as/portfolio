@@ -3,17 +3,22 @@ import { HEADER_HEIGHTS, HEADER_PADDINGS } from "@/constants/sizing_vars"
 
 import { Nav } from "@/components/nav";
 
-export function Header () {
+interface Props {
+	hght: HEADER_HEIGHTS;
+	pddgX: HEADER_PADDINGS;
+}
+
+export function Header ({hght, pddgX}: Props) {
 	return (
 		<StyledHeader 
 		$outlined
-		$padding={HEADER_PADDINGS.SMALL}
-		$height={HEADER_HEIGHTS.BIG}
+		$padding={pddgX}
+		$height={hght}
 		>
 			<Nav
 				spacing={"space-between"}
-				hdrHght={HEADER_HEIGHTS.BIG}
-				hdrPddg={HEADER_PADDINGS.SMALL}
+				hdrHght={hght}
+				hdrPddg={pddgX}
 			/>
 		</StyledHeader>
 	);
