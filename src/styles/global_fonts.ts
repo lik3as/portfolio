@@ -3,9 +3,9 @@ import RobotoBold from "@/assets/fonts/roboto/Roboto-Bold.ttf";
 import RobotoMedium from "@/assets/fonts/roboto/Roboto-Medium.ttf";
 import RobotoRegular from "@/assets/fonts/roboto/Roboto-Regular.ttf";
 
-import MPLUSMedium from "@/assets/fonts/mplus/MPLUSCodeLatin-Bold.ttf";
-import MPLUSRegular from "@/assets/fonts/mplus/MPLUSCodeLatin-Medium.ttf";
-import MPLUSBold from "@/assets/fonts/mplus/MPLUSCodeLatin-Regular.ttf";
+import MPLUSMedium from "@/assets/fonts/mplus/MPLUSCodeLatin-Medium.ttf";
+import MPLUSRegular from "@/assets/fonts/mplus/MPLUSCodeLatin-Regular.ttf";
+import MPLUSBold from "@/assets/fonts/mplus/MPLUSCodeLatin-Bold.ttf";
 
 export default createGlobalStyle`
 	@font-face {
