@@ -1,6 +1,6 @@
 export enum HEADER_HEIGHTS { 
 	BIG="--header-height-big",
-	MEDIUM="--headher-height-medium",
+	MEDIUM="--header-height-medium",
 	SMALL="--header-height-small"
 };
 
