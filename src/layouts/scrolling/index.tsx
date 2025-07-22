@@ -1,15 +1,31 @@
 import { ReactNode } from "react";
+import { ReactElement, HTMLAttributes } from "react";
+import { Header } from "@/components/header";
+import { HEADER_HEIGHTS, HEADER_PADDINGS } from "@/constants/sizing_vars";
+import { StyledMain } from "./styles";
 
 interface Props {
 	children: ReactNode;
-	header: ReactNode;
+	hdrHght: HEADER_HEIGHTS;
+	hdrPddg: HEADER_PADDINGS;
 }
 
-export function ScrollingLayout ({ children, header }: Props) {
+/**
+ *	- The layout depends on the header size
+ */
+export function ScrollingLayout ({ children, hdrHght, hdrPddg }: Props) {
 	return (
-		<div>
-			{ header }
-			{ children }
-		</div>
+		<>
+			<Header
+				hght={hdrHght}
+				pddgX={hdrPddg}
+			/>
+			<StyledMain
+				$pddgTop={hdrHght}
+				$pddgX={hdrPddg}
+			>
+				{ children }
+			</StyledMain>
+		</>
 	)
 }
