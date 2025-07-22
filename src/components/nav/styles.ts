@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { justify_content } from "@/utils/typings";
+import { DARK_THEME_COLORS } from "@/constants/colors";
 
 export const StyledNav = styled.nav<{
 	$spacing: justify_content
@@ -17,7 +18,7 @@ export const StyledNav = styled.nav<{
 export const Link = styled.a`
 	display: inline;
 	transition: color .2s ease-in-out;
-	color: white;
+	color: ${DARK_THEME_COLORS.CREAM};
 	text-decoration: none;
 	margin: auto 0;
 
