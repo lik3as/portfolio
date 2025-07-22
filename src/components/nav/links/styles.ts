@@ -7,11 +7,6 @@ export const StyledLinks = styled.div`
 	justify-content: space-evenly;
 	list-style: none;
 
-	& a {
-		margin: auto;
-		font-family: "MPLUS Bold";
-	}
-
 	@media screen and (width <= 768px) {
 		width: 100%;
 		flex-direction: column;

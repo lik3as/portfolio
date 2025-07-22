@@ -22,7 +22,7 @@ export const Link = styled.a`
 	margin: auto 0;
 
 	&.name {
-		font-family: "MPLUS Bold";
+		font-family: "MPLUS Medium";
 		font-size: 1.5em;
 	}
 
