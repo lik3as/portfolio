@@ -4,10 +4,9 @@ import { Link } from "../styles";
 export function NavLinks() {
 	return (
 		<StyledLinks>
-			<Link href="#about">SOBRE</Link>
-			<Link>PROJETOS</Link>
-			<Link>EXPERIÊNCIA</Link>
-			<Link>CONTATO</Link>
+			<Link href="#aboutme">ABOUT</Link>
+			<Link>PROJECTS</Link>
+			<Link>SOCIALS</Link>
 		</StyledLinks>
 	)
 }

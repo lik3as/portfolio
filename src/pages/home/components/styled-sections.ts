@@ -32,9 +32,25 @@ const TitledSection = styled.section`
 export const WelcomeSection = styled(TitledSection)`
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	text-align: center;
+	box-sizing: content-box;
+
+	& > .text {
+		margin: auto;
+	}
+
+	& .arrow-down {
+		margin-top: auto;
+		opacity: .3;
+		transition: opacity .2s ease-in-out;
+	}
+
+	& .arrow-down:hover {
+		opacity: 1;
+		cursor: pointer;
+	}
 `;
 
 export const AboutSection = styled(TitledSection)`
@@ -42,7 +58,7 @@ export const AboutSection = styled(TitledSection)`
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: auto 1fr;
 
-	& .title {
+	& .about-header {
 		grid-row: 1;
 		grid-column: 1 / 3;
 		text-align: center;

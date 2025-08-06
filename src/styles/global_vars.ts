@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { HEADER_HEIGHTS, HEADER_PADDINGS } from "@/constants/sizing_vars";
+import { HEADER_HEIGHTS, HEADER_PADDINGS, SECTION_PADDINGS } from "@/constants/sizing_vars";
 
 export default createGlobalStyle`
 	#root {
@@ -11,6 +11,8 @@ export default createGlobalStyle`
 		${HEADER_PADDINGS.BIG}: 8rem;
 		${HEADER_PADDINGS.MEDIUM}: 4rem;
 		${HEADER_PADDINGS.SMALL}: 2rem;
+
+		${SECTION_PADDINGS.MEDIUM}: 10rem;
 
 		@media screen and (width <= 768px) {
 			${HEADER_HEIGHTS.BIG}: 63px;
