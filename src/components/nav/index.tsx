@@ -4,7 +4,7 @@ import menuSvg from "@/assets/svgs/hamburger-menu.svg"
 import xSvg from "@/assets/svgs/x.svg"
 import { useState } from "react";
 import { HEADER_HEIGHTS, HEADER_PADDINGS } from "@/constants/sizing_vars"
-import { WELCOME_SECTION_ID } from "@/constants/ids";
+import { WELCOME_SECTION_ID } from "@/constants/dom_ids";
 import { useWindowWidth } from "@/hooks/use_window_width";
 
 import { Image } from "@/components/image";
@@ -34,7 +34,7 @@ export function Nav ({ spacing, hdrHght, hdrPddg }: Props) {
 		<StyledNav
 			$spacing={spacing}
 		>
-			<Link className="name" href={`#root`}>
+			<Link className="name" href={`#${WELCOME_SECTION_ID}`}>
 				DAVI ALMEIDA
 			</Link>
 			{ 

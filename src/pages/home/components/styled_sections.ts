@@ -82,3 +82,7 @@ export const AboutSection = styled(TitledSection)`
 		}
 	}
 `;
+
+export const ProjectsSection = styled(TitledSection)`
+	
+`;

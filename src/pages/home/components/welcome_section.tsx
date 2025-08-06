@@ -1,4 +1,4 @@
-import { WelcomeSection as SCWelcomeSection } from "./styled-sections";
+import { WelcomeSection as SCWelcomeSection } from "./styled_sections";
 import { Image } from "@/components/image/";
 import arrowSvg from "@/assets/svgs/arrow-down.svg";
 

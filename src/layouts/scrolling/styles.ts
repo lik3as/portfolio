@@ -7,16 +7,22 @@ export const StyledMain = styled.main<{
 	$sctPddg?: SECTION_PADDINGS
 }>`
 	position: absolute;
-	padding: var(${props => props.$pddgTop}) var(${props => props.$pddgX});
+	/*
+	 *	since the first section now implements a top padding,
+	 *	there's no need of a content offset.
+	 *	------------------------------------
+	 *	padding: var(${props => props.$pddgTop}) var(${props => props.$pddgX});
+	 */
 	padding-bottom: 0;
 
 	& > section {
-		width: calc(100vw - var(${props => props.$pddgX}) * 2); /* x2 because its paddingX */
-		height: calc(100vh - var(${props => props.$pddgTop}));
-	}
-
-	& > section:not(:first-child) {
+		/*	no content offset means no need to adjust section width.
+		 *	(height still is decremented beacuse of fixed header)
+		 *	----------------------------------
+		 *	width: calc(100vw - var(${props => props.$pddgX}) * 2);
+		 */
 		padding-top: var(${props => props.$pddgTop ?? "none"});
+		height: calc(100vh - var(${props => props.$pddgTop}));
 	}
 
 	@media screen and (width <= 768px) {

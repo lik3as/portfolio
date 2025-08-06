@@ -1,9 +1,11 @@
 import { PROJECTS_SECTION_ID } from "@/constants/dom_ids";
+import { ProjectsSection as SCProjectsSection } from "./styled_sections";
 
 export function ProjectsSection () {
 	return (
-		<section id={PROJECTS_SECTION_ID}>
-		</section>
+		<SCProjectsSection id={PROJECTS_SECTION_ID}>
+			
+		</SCProjectsSection>
 	)
 }
 

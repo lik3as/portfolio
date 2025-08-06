@@ -1,4 +1,4 @@
-import { AboutSection as SCAboutSection } from "./styled-sections";
+import { AboutSection as SCAboutSection } from "./styled_sections";
 import { EDUCATION_MARKUP_TEXT } from "@/constants/texts";
 import { ABOUT_SECTION_ID } from "@/constants/dom_ids";
 
